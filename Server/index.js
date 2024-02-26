@@ -6,7 +6,7 @@ import cors from 'cors'
 const app=express()
 app.use(express.json())
 app.use(cors())
-
+   
 const connect=async()=>{
     try{
     await mongoose.connect('mongodb+srv://hello:kavi@cluster0.wjcn8sl.mongodb.net/?retryWrites=true&w=majority')

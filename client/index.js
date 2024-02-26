@@ -20,7 +20,7 @@ const get = async () => {
 
             const ebtn = document.createElement('button');
             ebtn.id = "edit";
-            ebtn.textContent = 'Edit';
+            ebtn.innerHTML = 'Edit';
 
 
             ebtn.onclick = () => {
@@ -66,7 +66,7 @@ const Todo = async () => {
         });
 
         if (!response.ok) {
-            throw Error(`HTTP error! Status: ${response.status}`);
+            throw Error(`HTTP error! Status: ${response.status}`) ;
         } else {
             const res = await response.json();
             console.log(res, 'success');
